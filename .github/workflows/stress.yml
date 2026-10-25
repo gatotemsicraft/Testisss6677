@@ -1,0 +1,17 @@
+name: Web Stress Test
+
+on:
+  workflow_dispatch: # Tombol "Run workflow" manual di tab Actions
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run k6 load test
+        uses: grafana/k6-action@v0.3.0
+        with:
+          filename: test.js
+          
