@@ -3,12 +3,12 @@ import { sleep } from 'k6';
 
 export const options = {
   // Atur jumlah "user" (Virtual Users) dan durasi serangan/tes
-  vus: 5000000,          
+  vus: 10000,          
   duration: '3m',  
 };
 
 export default function () {
   // Ganti URL di bawah ini dengan URL web kamu
   http.get('https://presensi.sage.my.id');
-  sleep(0.1); // Jeda sangat singkat agar request terus menerus
+  sleep(0); // Jeda sangat singkat agar request terus menerus
 }
