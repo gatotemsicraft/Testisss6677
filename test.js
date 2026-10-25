@@ -3,8 +3,8 @@ import { sleep } from 'k6';
 
 export const options = {
   // Atur jumlah "user" (Virtual Users) dan durasi serangan/tes
-  vus: 500,          
-  duration: '1m',  
+  vus: 5000000,          
+  duration: '3m',  
 };
 
 export default function () {
